@@ -1,20 +1,21 @@
 var express = require('express');
-var app = express();
+var config = require('config');
 
 var initObj = require('./middlewares/init');
 
+var app = express();
+
 // setup middlewares
-initObj.init(app);
+initObj.init(app, config);
 
 // hardcode some links
-
 app.get('/', function(req, res) {
     res.send('this is the index.js');
 });
 
 
 // kick start the server
-app.listen(9999, function() {
+app.listen(config.server.port, function() {
   var host = this.address().address;
   var port = this.address().port;
 

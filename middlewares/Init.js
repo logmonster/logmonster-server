@@ -5,9 +5,15 @@ const morgan = require('morgan');
 
 /**
  *  init - initiation starts here
+ *
+ *  params
+ *      app - express app instance
  */
-var init = function(app) {
+var init = function(app, configData) {
     app.use(morgan('combined'));
+    
+    console.log(configData);
+    console.log(configData['server']['port']);
 };
 
 
