@@ -1,0 +1,35 @@
+{
+  "name": "logmonster-server",
+  "version": "1.0.0",
+  "description": "logmonster server component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    ,
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://logmonster@github.com/logmonster/logmonster-server.git"
+  },
+  "keywords": [
+    "log",
+    "creation",
+    "nodejs",
+    "express",
+    "server",
+    "RESTful"
+  ],
+  "author": "jason.wong",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/logmonster/logmonster-server/issues"
+  },
+  "homepage": "https://github.com/logmonster/logmonster-server#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "multer": "^1.2.0"
+  }
+}
