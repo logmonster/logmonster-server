@@ -1,20 +1,25 @@
 var express = require('express');
-var config = require('config');
+var config = require('config');     // containing config data (default.json etc)
 
 var initObj = require('./middlewares/init');
+var routesObj = require('./middlewares/routes');
 
 var app = express();
+var router = express.Router();
 
-// setup middlewares
+
+// *************************** //
+// **   setup middlewares   ** //
+// *************************** //
+
 initObj.init(app, config);
-
-// hardcode some links
-app.get('/', function(req, res) {
-    res.send('this is the index.js');
-});
+routesObj.setRoutes(router, app);
 
 
-// kick start the server
+// ******************************* //
+// **   kick start the server   ** //
+// ******************************* //
+
 app.listen(config.server.port, function() {
   var host = this.address().address;
   var port = this.address().port;

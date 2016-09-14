@@ -11,9 +11,8 @@ const morgan = require('morgan');
  */
 var init = function(app, configData) {
     app.use(morgan('combined'));
-    
-    console.log(configData);
-    console.log(configData['server']['port']);
+
+    // ... TODO: do other configs here...
 };
 
 
