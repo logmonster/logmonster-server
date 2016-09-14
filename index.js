@@ -21,8 +21,9 @@ routesObj.setRoutes(router, app);
 // ******************************* //
 
 app.listen(config.server.port, function() {
-  var host = this.address().address;
-  var port = this.address().port;
+    var host = this.address().address;
+    var port = this.address().port;
 
-  console.log("** listening at http://%s:%s", host, port);
+    console.log("** listening at \x1b[36mhttp://%s:%s", host, port);
+    console.log("\x1b[0m"); // reset back to the original text color
 });
