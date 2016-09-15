@@ -13,7 +13,7 @@ var router = express.Router();
 // *************************** //
 
 initObj.init(app, config);
-routesObj.setRoutes(router, app);
+routesObj.setRoutes(router, app, config);
 
 
 // ******************************* //
@@ -24,6 +24,8 @@ app.listen(config.server.port, function() {
     var host = this.address().address;
     var port = this.address().port;
 
+    // * https://coderwall.com/p/yphywg/printing-colorful-text-in-terminal-when-run-node-js-script
+    
     console.log("** listening at \x1b[36mhttp://%s:%s", host, port);
     console.log("\x1b[0m"); // reset back to the original text color
 });

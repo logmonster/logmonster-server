@@ -3,5 +3,9 @@
         "port": 9999,
         "addressOrIP": "localhost"
     },
-    "testing": "this is a test message"
+    
+    "logging": {
+        "path-history": true    
+    }
+    
 }
