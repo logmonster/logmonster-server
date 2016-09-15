@@ -1,4 +1,9 @@
 
+/*
+ *  {moment}:
+ *      similar to Joda Time though (functions)
+ *      http://momentjs.com/docs/#/displaying/
+ */
 var moment = require('moment');
 
 
